@@ -45,7 +45,7 @@ header {
 }
 
 section {
-  min-height: 100wh;
+  min-height: 100vh;
   width: 100%;
   position: absolute;
   left: 0;
@@ -65,30 +65,63 @@ section {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: rgba(228, 38, 70, 0.658);
 }
 
 .sec2 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: slateblue;
 }
 
 .sec3 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: #92cd5a;
 }
 
 .sec4 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: #5acdb0;
 }
 
 .sec5 {
   display: none;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
+  background-color: #5a95cd;
+}
+
+.active {
+  display: block;
+  -webkit-animation: scaleAnim 1s ease-in-out;
+          animation: scaleAnim 1s ease-in-out;
+}
+
+@-webkit-keyframes scaleAnim {
+  0% {
+    -webkit-transform: translateY(-100%) scaleY(0);
+            transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0%) scaleY(1);
+            transform: translateY(0%) scaleY(1);
+  }
+}
+
+@keyframes scaleAnim {
+  0% {
+    -webkit-transform: translateY(-100%) scaleY(0);
+            transform: translateY(-100%) scaleY(0);
+  }
+  100% {
+    -webkit-transform: translateY(0%) scaleY(1);
+            transform: translateY(0%) scaleY(1);
+  }
 }
 
 .controls {
@@ -111,6 +144,16 @@ section {
           justify-content: center;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+}
+
+.controls .active-btn {
+  background-color: var(--color-secondary) !important;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.controls .active-btn i {
+  color: var(--color-white) !important;
 }
 
 .controls .control {
